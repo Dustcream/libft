@@ -6,7 +6,7 @@
 /*   By: dmuller <dmuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 16:39:25 by dmuller           #+#    #+#             */
-/*   Updated: 2022/11/02 15:22:45 by dmuller          ###   ########.fr       */
+/*   Updated: 2022/11/05 15:40:10 by dmuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t ft_strlen(const char *s)
     size_t i;
 
     i=0;
+    if(!s)
+        return (i);
     while (s[i])
         i++;
     return(i);

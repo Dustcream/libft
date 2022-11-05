@@ -6,7 +6,20 @@
 /*   By: dmuller <dmuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 16:38:58 by dmuller           #+#    #+#             */
-/*   Updated: 2022/11/02 14:37:07 by dmuller          ###   ########.fr       */
+/*   Updated: 2022/11/05 23:23:13 by dmuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+void    ft_putstr_fd(char *s, int fd)
+{
+    if (s)
+    {
+        while (*s != '\0')
+        {
+            write(fd, s, 1);
+            s++;
+        }
+    }
+}
