@@ -6,7 +6,7 @@
 /*   By: dmuller <dmuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 16:38:14 by dmuller           #+#    #+#             */
-/*   Updated: 2022/11/05 22:56:07 by dmuller          ###   ########.fr       */
+/*   Updated: 2022/11/05 23:52:04 by dmuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void    *ft_calloc(size_t count, size_t size)
 
     a = malloc(count * size);
     if (!a)
-        return(NULL)
+        return(NULL);
     ft_bzero(a, count * size);
     return(a);
 }
