@@ -28,6 +28,8 @@
     int ft_memcmp(const void *s1, const void *s2, size_t n);
 
     size_t ft_strlen(const char *s);
+    size_t  ft_strlcat(char *dst, const char *src, size_t size);
+    size_t  ft_strlcpy(char *dst, const char *src, size_t dstsize);
 
     void    *ft_memchr(const void *s, int c, size_t n);
     void    *ft_memcpy(void *dst, const void *src, size_t len);
@@ -39,7 +41,11 @@
     void    ft_putendl_fd(char *s, int fd);
     void    ft_putnbr_fd(int n, int fd);
     void    ft_putstr_fd(char *s, int fd);
+    void    ft_striteri(char *s, void (*f)(unsigned int, char *));
 
     char    *ft_itoa(int n);
+    char    *ft_strchr(const char *s, int c);
+    char    *ft_strdup(const char *src);
+    char    *ft_strjoin(char const *s1, char const *s2);
 
 #endif
