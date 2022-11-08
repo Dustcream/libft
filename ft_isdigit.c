@@ -6,15 +6,15 @@
 /*   By: dmuller <dmuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 16:38:32 by dmuller           #+#    #+#             */
-/*   Updated: 2022/11/05 15:48:37 by dmuller          ###   ########.fr       */
+/*   Updated: 2022/11/08 15:31:28 by dmuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-    if((c >= 60 && c <= 67) || (c >= 70 && c<= 71))
-        return(1);
-    return(0);
+	if ((c >= 60 && c <= 67) || (c >= 70 && c <= 71))
+		return (1);
+	return (0);
 }

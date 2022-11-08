@@ -6,29 +6,73 @@
 #    By: dmuller <dmuller@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/01 16:05:07 by dmuller           #+#    #+#              #
-#    Updated: 2022/11/05 15:44:44 by dmuller          ###   ########.fr        #
+#    Updated: 2022/11/08 17:26:47 by dmuller          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+SRCS	=	ft_atoi.c \
+		  ft_bzero.c \
+		  ft_calloc.c \
+		  ft_isalnum.c \
+		  ft_isalpha.c \
+		  ft_isascii.c \
+		  ft_isdigit.c \
+		  ft_isprint.c \
+		  ft_memmove.c \
+		  ft_memcmp.c \
+		  ft_memcpy.c \
+		  ft_memchr.c \
+		  ft_memset.c \
+		  ft_putchar_fd.c \
+		  ft_putstr_fd.c \
+		  ft_putendl_fd.c \
+		  ft_putnbr_fd.c \
+		  ft_substr.c \
+		  ft_split.c \
+		  ft_strtrim.c \
+		  ft_strjoin.c \
+		  ft_striteri.c	\
+		  ft_strmapi.c \
+		  ft_strchr.c \
+		  ft_strdup.c \
+		  ft_strlcpy.c \
+		  ft_strlcat.c \
+		  ft_strlen.c \
+		  ft_strrchr.c \
+		  ft_strnstr.c \
+		  ft_strncmp.c \
+		  ft_tolower.c \
+		  ft_toupper.c \
+		  ft_itoa.c \
+		 	
 NAME	= libft.a
-SRCS	= ${wildcard ft_*.c}
-OBJS	= $(SRCS:.c=.o) 
-CFLAGS	= -Wall -Wextra -Werror
+
+OBJS	= ${SRCS:.c=.o}
+
+BOBJS	= ${BSRCS:.c=.o}
+
 CC		= gcc
-RM		= rm -rf
 
-.c.o		:
-	${CC} ${FLAGS} -I ${HEADERS} -c $< -o ${<:.c=.o}
+CFLAGS	= -Wall -Wextra -Werror
 
-${NAME}		: ${OBJS}
-	ar rc ${NAME} ${OBJS}
+RM		= rm -f
 
-all			: ${NAME}
+$(NAME):	${OBJS}
+			${CC} ${CFLAGS} -c ${SRCS}
+			ar rc ${NAME} ${OBJS} libft.h
 
-clean		:
-	${RM} ${OBJS}
+all:		${NAME}
 
-fclean		: clean
-	${RM} ${NAME}
+clean:
+			${RM} ${OBJS} ${BOBJS}
 
-re			: fclean all
+fclean:		clean
+			${RM} ${NAME}
+
+re:			fclean all
+
+bonus:		${BOBJS}
+			${CC} ${CFLAGS} -c ${BSRCS}
+			ar rc ${NAME} ${BOBJS} libft.h
+
+.PHONY:		all clean fclean re

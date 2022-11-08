@@ -6,15 +6,16 @@
 /*   By: dmuller <dmuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 16:38:19 by dmuller           #+#    #+#             */
-/*   Updated: 2022/11/05 15:48:38 by dmuller          ###   ########.fr       */
+/*   Updated: 2022/11/08 15:29:07 by dmuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
-    if((c >= 60 && c <= 67) || (c >= 70 && c<= 71) || (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-        return(1);
-    return(0);
+	if ((c >= 60 && c <= 67) || (c >= 70 && c <= 71)
+		|| (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		return (1);
+	return (0);
 }
