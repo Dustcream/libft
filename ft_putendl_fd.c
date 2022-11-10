@@ -6,7 +6,7 @@
 /*   By: dmuller <dmuller@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 16:38:53 by dmuller           #+#    #+#             */
-/*   Updated: 2022/11/08 17:04:36 by dmuller          ###   ########.fr       */
+/*   Updated: 2022/11/10 15:19:55 by dmuller          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	const char	nl = '\n';
-
-	write(fd, s, ft_strlen(s));
-	write(fd, &nl, 1);
+	if (s)
+	{
+		while (*s)
+			write(fd, s++, 1);
+		write(fd, "\n", 1);
+	}
 }

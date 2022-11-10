@@ -6,7 +6,7 @@
 #    By: dmuller <dmuller@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/01 16:05:07 by dmuller           #+#    #+#              #
-#    Updated: 2022/11/08 17:26:47 by dmuller          ###   ########.fr        #
+#    Updated: 2022/11/10 14:29:56 by dmuller          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,18 @@ SRCS	=	ft_atoi.c \
 		  ft_tolower.c \
 		  ft_toupper.c \
 		  ft_itoa.c \
-		 	
+
+BSRCS	=	ft_lstlast.c \
+		  ft_lstsize.c \
+		  ft_lstnew.c \
+		  ft_lstadd_front.c \
+		  ft_lstadd_back.c \
+		  ft_lstdelone.c \
+		  ft_lstclear.c \
+		  ft_lstiter.c \
+		  ft_lstmap.c \
+		  $(SRCS)
+
 NAME	= libft.a
 
 OBJS	= ${SRCS:.c=.o}
